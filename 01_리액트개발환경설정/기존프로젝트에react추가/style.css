@@ -1,0 +1,26 @@
+.profile-container{
+    width: 600px;
+    border: 1px solid #eceff1;
+}
+
+.top-area{
+    height: 200px;
+    background-color: #cfd9de;
+}
+
+.bottom-area{
+    position: relative;
+    padding: 12px 16px;
+}
+
+.profile-image{
+    position: absolute;
+    left: 16px;
+    top: -62px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 133px;
+}
