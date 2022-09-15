@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 export default function App() {
-  const [number, setNumber] = useState(1);
+  const [number, setNumber] = useState(1)
 
-  const add = () => setNumber((number) => number + 1);
-  const subtract = () => setNumber((number) => number - 1);
-  const multiplyBy2 = () => setNumber((number) => number * 2);
-  const multiplyBy2AndAddBy1 = () => {
-    multiplyBy2();
-    add();
-  };
+  const add = () => setNumber((number) => number + 1)
+  const subtract = () => setNumber((number) => number - 1)
+  const multiplyBy10 = () => setNumber((number) => number * 10)
+  const multiplyBy10AndAddBy1 = () => {
+    multiplyBy10()
+    add()
+  }
 
   // *2 + 1 버튼을 클릭했을 때, 결과적으로 +1 되는 값을 반환하는데, 왜그럴까?
   // react에서 state 업데이트는 병합된다.
@@ -29,9 +29,9 @@ export default function App() {
       <div>
         <button onClick={add}>+ 1</button>
         <button onClick={subtract}>- 1</button>
-        <button onClick={multiplyBy2}>*2</button>
-        <button onClick={multiplyBy2AndAddBy1}>*2 + 1</button>
+        <button onClick={multiplyBy10}>*10</button>
+        <button onClick={multiplyBy10AndAddBy1}>*10 + 1</button>
       </div>
     </div>
-  );
+  )
 }
