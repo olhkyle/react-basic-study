@@ -8,15 +8,15 @@ import UnControlledForm from './components/UnControlledForm';
 function App() {
   return (
     <div style={{margin: '20px'}}>
-      {/* <Toggle/>
+      <Toggle/>
       <br/>
       <br/>
       <SimpleForm/>
       <br/>
       <br/>
-      <UnControlledForm/>
-      <CatParent/> */}
-      <ToDoList/>
+      {/* <UnControlledForm/> */}
+      {/* <CatParent/> */}
+      {/* <ToDoList/> */}
     </div>
   );
 }
