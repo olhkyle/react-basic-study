@@ -40,7 +40,7 @@ function StoreTable(props) {
         <div>
             <table>
                 <thead>
-                    <tr>
+                    <tr style={{fontWeight: 'bold'}}>
                         <th>Name</th>   
                         <th>Price</th>
                     </tr>
