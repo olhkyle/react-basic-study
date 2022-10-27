@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Form from './Form';
-import FilteredResult from './FilteredResult';
+import SearchBar from './SearchBar';
+import StoreTable from './StoreTable';
 
 function OnlineStore(){
     const datas = [
@@ -15,8 +15,8 @@ function OnlineStore(){
 
     return (
         <div style={{margin: 20, padding: 20}}>
-            <Form datas={datas}/>
-            <FilteredResult datas={datas}/>
+            <SearchBar datas={datas}/>
+            <StoreTable products={datas}/>
         </div>
     )
 }
