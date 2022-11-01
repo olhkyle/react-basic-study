@@ -11,7 +11,7 @@ export default function ReactDocPage(){
     return (
         <>
             <h5 onClick={() => navigate('/')}>logo</h5>
-            ReactDocPage ##{params.docId}
+            <div>ReactDocPage ##{params.docId}</div>
         </>
     )
 }
