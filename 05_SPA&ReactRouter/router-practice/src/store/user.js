@@ -44,6 +44,6 @@ export default function UserStore(props) {
     const [type, contextDispatch] = useReducer(typeReducer, initialType);
 
     return (
-        <UserContext.Provider value={ {height: type.height, gender: type.gender, contextDispatch} }>{ props.children }</UserContext.Provider>
+        <UserContext.Provider value={ {type, contextDispatch} }>{ props.children }</UserContext.Provider>
     )
 }
