@@ -1,7 +1,14 @@
+// 정적 import
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import { useQuery, useQueries, useMutation, useQueryClient } from "react-query";
 import { getUser, getPosts, updateNickname } from '../mocks/api'
+
+
+const Post = lazy(() => import('./Post'));
+
+// 동적 import
+import ('./math').then((math) => console.log(math(1,2)));
 
 // api를 통해 현재 닉네임값을 가져오기
 // handleSubmit : 업데이트 된 inputValue를 서버에 전송해서, 닉네임값 업데이트하기
@@ -53,7 +60,7 @@ export default function Edit() {
         </label>
       </form>
       <ul>
-        {posts?.map(p => <li key={p.title}>{p.title}</li>)}
+        {posts?.map(p => <Post key={p.title} title={p.title}/>)}
       </ul>
     </>
   );
